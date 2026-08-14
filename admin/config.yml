@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+    - name: "settings"
+    label:   "RG Proyectos"
+    files:
+            - file: "content/settings.yml"
+        label: "Datos de la web"
+        name: "datos"
+        fields:
+                    - {label: "Título de la web", name: "title", widget: "string", default: "RG Proyectos - Remodelaciones"}
+                    - {label: "Teléfono", name: "phone", widget: "string", default: "+56 9..."}
+                    - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+                    - {label: "Descripción", name: "description", widget: "text"}
