@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RG Proyectos & Obras | Solidez y Diseño en Construcción</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif}
@@ -16,107 +15,52 @@ header a{margin-left:18px;text-decoration:none;color:#111;font-weight:600}
 .hero p{margin:16px 0;color:#555;font-size:18px}
 .btn{display:inline-block;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:700}
 .btn-orange{background:#F59E0B;color:#111}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:50px 5%;background:#111}
-.card{background:#1d1d1d;border:1px solid #2a2a2a;border-radius:14px;padding:18px;color:#fff}
-.card b{color:#F59E0B;font-size:12px;letter-spacing:1px}
 .gallery{padding:50px 5%;background:#fff}
-.filters button{border:1px solid #ddd;background:#fff;padding:8px 14px;border-radius:20px;margin-right:8px;cursor:pointer;font-weight:600}
-.filters button.active{background:#111;color:#fff}
 .masonry{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-.masonry .item{aspect-ratio:4/3;background:#eee;border-radius:12px;overflow:hidden;position:relative;background-size:cover;background-position:center;cursor:pointer}
+.masonry .item{aspect-ratio:4/3;background:#eee;border-radius:12px;overflow:hidden;position:relative;background-size:cover;background-position:center}
 .masonry .item span{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.7);color:#fff;font-size:12px;padding:4px 8px;border-radius:6px}
 footer{padding:24px 5%;background:#111;color:#777;font-size:13px;text-align:center}
-.whatsapp{position:fixed;bottom:18px;right:18px;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none}
-@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <header>
-<img src="/images/logo.png" alt="RG Proyectos" onerror="this.src='https://via.placeholder.com/150x50?text=RG+Proyectos'">
-<div>
-<a href="#servicios">Servicios</a>
-<a href="#galeria">Galería</a>
-<a class="btn-wa" href="https://wa.me/56900000000">WhatsApp</a>
-</div>
+<div style="font-weight:900;font-size:22px">RG <span style="color:#F59E0B">PROYECTOS</span></div>
+<div><a href="#galeria">Galería</a><a class="btn-wa" href="https://wa.me/56900000000">WhatsApp</a></div>
 </header>
-
 <div class="hero">
 <div>
 <h1>Solidez y diseño en <span>construcción</span></h1>
-<p>Especialistas en terminaciones en Santiago: cerámica, pintura, piso flotante y wall panel.</p>
-<a class="btn btn-orange" href="#galeria">Ver trabajos reales</a>
-<p style="margin-top:14px;font-size:13px;color:#888">Sube fotos a GitHub y aparecen solas aquí ↓</p>
+<p>Trabajos reales subidos desde GitHub - Santiago, Chile</p>
+<a class="btn btn-orange" href="#galeria">Ver 24 trabajos</a>
 </div>
-<div style="height:340px;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800') center/cover;border-radius:18px"></div>
-</div>
-
-<div class="grid" id="servicios">
-<div class="card"><b>CERÁMICA</b><h3>Porcelanato y Baños</h3><p style="color:#999;font-size:13px">Instalación perfecta</p></div>
-<div class="card"><b>PINTURA</b><h3>Interior / Exterior</h3><p style="color:#999;font-size:13px">Alta cobertura</p></div>
-<div class="card"><b>PISO</b><h3>Flotante y Vinílico</h3><p style="color:#999;font-size:13px">Sin desniveles</p></div>
-<div class="card"><b>WALL PANEL</b><h3>WPC Decorativo</h3><p style="color:#999;font-size:13px">TV Wall moderno</p></div>
+<div style="height:340px;background:#111;border-radius:18px;display:flex;align-items:center;justify-content:center;color:#F59E0B;font-weight:800;font-size:24px">RG PROYECTOS & OBRAS</div>
 </div>
 
 <div class="gallery" id="galeria">
-<h2>Galería automática</h2>
-<p style="color:#666;margin:8px 0 18px">Tú subes fotos a la carpeta y aparecen solas. Sin tocar código.</p>
-<div class="filters">
-<button class="active" onclick="filtrar('all',this)">Todos</button>
-<button onclick="filtrar('ceramica',this)">Cerámica</button>
-<button onclick="filtrar('pintura',this)">Pintura</button>
-<button onclick="filtrar('piso-flotante',this)">Piso Flotante</button>
-<button onclick="filtrar('wall-panel',this)">Wall Panel</button>
-<button onclick="filtrar('tabiqueria',this)">Tabiquería</button>
-</div>
+<h2>Galería Real - 24 Fotos</h2>
+<p style="color:#666;margin:8px 0 18px">Todas las fotos que subiste a GitHub aparecen aquí automáticamente.</p>
 <div class="masonry" id="masonry"></div>
-<p id="vacio" style="margin-top:20px;color:#888;display:none">Aún no hay fotos. Sube una a <code>static/images/obras/NOMBRE/</code> en GitHub.</p>
 </div>
 
-<footer>© 2026 RG Proyectos & Obras - www.rgproyectos.cl - Santiago, Chile</footer>
-<a class="whatsapp" href="https://wa.me/56900000000">💬</a>
-
+<footer>© 2026 RG Proyectos & Obras - www.rgproyectos.cl</footer>
 <script>
 const REPO = "Davidjesus838/rgproyectos.cl";
-const CATEGORIAS = ["ceramica","pintura","piso-flotante","wall-panel","tabiqueria"];
-async function cargarGaleria(){
-  const cont = document.getElementById("masonry");
-  cont.innerHTML = "";
-  let total = 0;
-  for(let cat of CATEGORIAS){
-    try{
-      const res = await fetch(`https://api.github.com/repos/${REPO}/contents/static/images/obras/${cat}`);
-      if(!res.ok) continue;
-      const files = await res.json();
-      files.forEach(f=>{
-        if(f.type==="file" && /\.(jpe?g|png|webp)$/i.test(f.name)){
-          total++;
-          const div = document.createElement("div");
-          div.className = "item";
-          div.dataset.cat = cat;
-          div.style.backgroundImage = `url('${f.download_url}')`;
-          div.innerHTML = `<span>${cat}</span>`;
-          div.onclick = ()=> window.open(f.download_url,'_blank');
-          cont.appendChild(div);
-        }
-      });
-    }catch(e){}
-  }
-  if(total===0){
-    document.getElementById("vacio").style.display="block";
-    cont.innerHTML = `
-      <div class="item" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600')"><span>pintura - demo</span></div>
-      <div class="item" style="background-image:url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600')"><span>piso-flotante - demo</span></div>
-    `;
-  }
+async function cargar(){
+  const cont=document.getElementById("masonry");
+  try{
+    const res=await fetch(`https://api.github.com/repos/${REPO}/contents/`);
+    const files=await res.json();
+    files.filter(f=>/\.(jpe?g|png|webp)$/i.test(f.name)).forEach(f=>{
+      const div=document.createElement("div");
+      div.className="item";
+      div.style.backgroundImage=`url('${f.download_url}')`;
+      div.innerHTML=`<span>${f.name.slice(0,15)}</span>`;
+      div.onclick=()=>window.open(f.download_url,'_blank');
+      cont.appendChild(div);
+    });
+  }catch(e){cont.innerHTML="Cargando fotos...";}
 }
-function filtrar(cat,btn){
-  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
-  btn.classList.add("active");
-  document.querySelectorAll(".masonry .item").forEach(el=>{
-    el.style.display = (cat==="all" || el.dataset.cat===cat) ? "block" : "none";
-  });
-}
-cargarGaleria();
+cargar();
 </script>
 </body>
 </html>
